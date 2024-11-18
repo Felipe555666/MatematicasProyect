@@ -12,7 +12,7 @@ if response.status_code == 200:  # Comprobar si la página es accesible
     
     # Paso 3: Extraer los titulares de noticias
     headlines = []
-    for item in soup.find_all('h3'):  # Cambia 'h3' según la etiqueta usada para los titulares
+    for item in soup.find_all('h3'):
         headline = item.get_text(strip=True)
         if headline:
             headlines.append(headline)
